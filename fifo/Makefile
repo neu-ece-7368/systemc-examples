@@ -23,6 +23,9 @@ $(TARGET): $(OBJS)
 
 all: $(TARGET)
 
+test: $(TARGET)
+	./$(TARGET)
+
 clean:
 	rm -rf *.o $(TARGET) trace.vcd
 

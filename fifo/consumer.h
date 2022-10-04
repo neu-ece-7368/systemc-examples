@@ -1,3 +1,6 @@
+#ifndef CONSUMER_H
+#define CONSUMER_H
+
 #include <systemc.h>
 
 SC_MODULE(Consumer){
@@ -17,3 +20,5 @@ SC_MODULE(Consumer){
        }
      }
 };
+
+#endif

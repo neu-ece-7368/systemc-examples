@@ -1,3 +1,6 @@
+#ifndef PRODUCER_H
+#define PRODUCER_H
+
 #include <systemc.h>
 SC_MODULE(Producer){
   public:
@@ -15,3 +18,5 @@ SC_MODULE(Producer){
         }
      }
 };
+
+#endif

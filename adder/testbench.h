@@ -1,3 +1,6 @@
+#ifndef TESTBENCH_H
+#define TESTBENCH_H
+
 // file testbench.h
 #include <systemc.h>
 #include "adder.h"
@@ -31,3 +34,5 @@ SC_MODULE(Testbench)
     sc_close_vcd_trace_file(pTracer);
   }
 };
+
+#endif
