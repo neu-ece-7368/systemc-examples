@@ -1,0 +1,14 @@
+{
+    "makefile.launchConfigurations": [
+        {
+            "cwd": "/home/schirner/teaching/7368/Adder/src",
+            "binaryPath": "/home/schirner/teaching/7368/Adder/src/main",
+            "binaryArgs": []
+        },
+        {
+            "cwd": "/home/schirner/teaching/7368/examples/fifo",
+            "binaryPath": "/home/schirner/teaching/7368/examples/fifo/main",
+            "binaryArgs": []
+        }
+    ]
+}

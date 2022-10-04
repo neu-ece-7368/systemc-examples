@@ -1,0 +1,9 @@
+{
+    "makefile.launchConfigurations": [
+        {
+            "cwd": "/home/schirner/teaching/7368/Adder/src",
+            "binaryPath": "/home/schirner/teaching/7368/Adder/src/main",
+            "binaryArgs": []
+        }
+    ]
+}
