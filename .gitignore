@@ -35,3 +35,6 @@ adder/main
 
 # VCD traces
 *.vcd 
+
+# VS Code settings 
+.vscode
