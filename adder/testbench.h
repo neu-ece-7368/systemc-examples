@@ -15,7 +15,8 @@ SC_MODULE(Testbench)
   void check();			// checking process
 
   SC_CTOR(Testbench)           	// constructor
-  : uut("uut"), ch_x("ch_x"), ch_y("aDifferentName"), ch_s("ch_s")		// initializer list
+  // initializer -- name all children
+  : uut("uut"), ch_x("ch_x"), ch_y("ch_y"), ch_s("ch_s")		
   {
     SC_THREAD(stim);		// without sensitivity
     SC_METHOD(check);
@@ -24,13 +25,16 @@ SC_MODULE(Testbench)
     uut.y(ch_y);		// port y of uut bound to ch_y
     uut.s(ch_s);		// port s of uut bound to ch_s
 
+    // create VCD trace file
     pTracer = sc_create_vcd_trace_file("trace");
-    sc_trace(pTracer, ch_x, "signal");
-    sc_trace(pTracer, ch_y, "signal");
-    sc_trace(pTracer, ch_s, "signal");
+    // register signals to be traced (and their names)
+    sc_trace(pTracer, ch_x, "ch_x");
+    sc_trace(pTracer, ch_y, "ch_y");
+    sc_trace(pTracer, ch_s, "ch_s");
 
   }
   ~Testbench() {
+    // close VCD file to flush writing
     sc_close_vcd_trace_file(pTracer);
   }
 };
