@@ -1,10 +1,10 @@
 
-ifneq ($(SYSTEMC_HOME),)
+ifneq ($(SYSTEMC),)
 # If SystemC is manually built, must match C++std
 	SYSTEMC_LIBS ?= lib64
 	SYSTEMC_CSTD ?= 14
-	CFLAGS += -I$(SYSTEMC_HOME)/include -std=c++$(SYSTEMC_CSTD)
-	LDFLAGS += -L$(SYSTEMC_HOME)/$(SYSTEMC_LIBS) -lsystemc
+	CFLAGS += -I$(SYSTEMC)/include -std=c++$(SYSTEMC_CSTD)
+	LDFLAGS += -L$(SYSTEMC)/$(SYSTEMC_LIBS) -lsystemc
 else
 	LDFLAGS += $(shell pkg-config --libs systemc)
 endif
