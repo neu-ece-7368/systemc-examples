@@ -1,5 +1,5 @@
 # top level make 
-DIRS = adder fifo temporal_decoupling
+DIRS = adder fifo temporal_decoupling signal
 
 # just recurse into sub cirectories and make target there
 all clean test: 

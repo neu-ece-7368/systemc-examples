@@ -32,6 +32,8 @@
 *.app
 fifo/main
 adder/main
+temporal_decoupling/main
+signal/main
 
 # VCD traces
 *.vcd 
