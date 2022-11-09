@@ -2,6 +2,8 @@
 #define PRODUCER_H
 
 #include <systemc.h>
+#include "../common/dbgMsg.h"
+
 SC_MODULE(Producer){
   public:
      sc_out<uint32_t> out;
@@ -13,9 +15,9 @@ SC_MODULE(Producer){
      void main() {
        for(uint32_t val=1; val<3; val++) {
         out = val;
-        cout << "P pre,  " << sc_time_stamp() << ", out: " << out << ", val: " << val << endl;
+        dbgPrintf("pre,  out=%u, val=%u\n", (uint32_t) out, (uint32_t) val);
         wait(1,SC_NS);
-        cout << "P post, " << sc_time_stamp() << ", out: " << out << ", val: " << val << endl;
+        dbgPrintf("post, out=%u, val=%u\n", (uint32_t) out, (uint32_t) val);
        }
      }
 };

@@ -2,6 +2,7 @@
 #define CONSUMER_H
 
 #include <systemc.h>
+#include "../common/dbgMsg.h"
 
 SC_MODULE(Consumer){
    public:
@@ -14,7 +15,7 @@ SC_MODULE(Consumer){
      void main() {
        while (true) {
           wait(in.default_event());
-          cout << "C,      " << sc_time_stamp() << ", in:  " << in << endl;
+          dbgPrintf("in=%u\n", (uint32_t) in);
        }
      }
 };
