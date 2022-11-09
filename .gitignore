@@ -34,6 +34,20 @@ fifo/main
 adder/main
 temporal_decoupling/main
 signal/main
+semantics/serial 
+semantics/par-1 
+semantics/par-2 
+semantics/par-3 
+semantics/event-1 
+semantics/event-2 
+semantics/event-3 
+semantics/event-4 
+semantics/event-5 
+semantics/event-6 
+semantics/comm-1 
+semantics/comm-2 
+semantics/eventq-1 
+semantics/eventq-2
 
 # VCD traces
 *.vcd 
