@@ -16,7 +16,7 @@ SC_MODULE(Consumer){
 
        while (true) {
          in->read(c);
-         cout << c;
+         dbgPrintf("read %c\n", c);
        }
      }
 };

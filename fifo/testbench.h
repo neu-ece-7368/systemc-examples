@@ -12,7 +12,9 @@ SC_MODULE(Testbench){
      Producer   prod;
      Consumer   cons;
 
-     SC_CTOR(Testbench): prod("prod"), cons("cons") {
+     SC_CTOR(Testbench): prod("prod"), cons("cons"), 
+            myFifo(4) // specify capacity (default 16)
+    {
        prod.out(myFifo);
        cons.in(myFifo);
      }
