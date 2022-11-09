@@ -5,22 +5,25 @@
 SC_MODULE(B){
   int x; 
   SC_CTOR(B){SC_THREAD(main);}
-  void b1() {
-    dbgMsg("start");
-    x=5;
-    dbgMsg("finish");
-  }
-  void b2() {
-    dbgMsg("start");
-    x=6;
-    dbgMsg("finish");
-  }
+  void b1();
+  void b2();
 
   void main() {
     b1();
     b2();
   }
 };
+
+void B::b1() {
+  dbgMsg("start");
+  x=5;
+  dbgMsg("finish");
+}
+void B::b2() {
+  dbgMsg("start");
+  x=6;
+  dbgMsg("finish");
+}
 
 
 int sc_main(int argc, char *argv[])  // cf. C++ main()
