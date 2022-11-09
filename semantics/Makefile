@@ -19,13 +19,12 @@ CPPFLAGS += -MMD -MP
 CPPFLAGS += -g
 
 # each source file is an own target and does not include other source files. 
-SRCS := serial.cpp par-1.cpp par-2.cpp par-3.cpp par-4.cpp 
+SRCS := serial.cpp par-1.cpp par-2.cpp par-3.cpp event-1.cpp event-2.cpp event-3.cpp event-4.cpp event-5.cpp event-6.cpp comm-1.cpp comm-2.cpp eventq-1.cpp eventq-2.cpp
 TARGETS :=  $(SRCS:.cpp=)
 OBJS := $(SRCS:.cpp=.o)
 
-TARGET = par-4
 
-all: $(TARGET)
+all: $(TARGETS)
 
 # execute all targets
 test: $(TARGETS)
